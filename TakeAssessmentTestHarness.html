@@ -1,0 +1,23 @@
+<html>
+<title>Assessment Test Harness</title>
+<body>
+<script>
+
+function getUrlVars() {
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value;
+});
+return vars;
+}
+var TPURLC = getUrlVars()["TPURLC"];
+</script>
+
+<button onClick="javascript:window.location.href=TPURLC">Complete Assessment/Application Redirect</button>
+<span id='redirect_url' />
+<script>
+document.getElementById("redirect_url").innerHTML = "<br /><br /> Redirect URL detected: " + TPURLC + "<br />";
+</script>
+
+</body>
+</html>
